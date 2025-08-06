@@ -1,71 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- link bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"></script>
-    <!-- link css -->
-    <link rel="stylesheet" href="../assets/styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-  </head>
-  <body class="font-fira">
-    <div class="container-fuid p-0 d-flex">
-      <aside class="col-2 bg-success sticky-top" style="height: 100vh">
-        <div class="w-100 text-center py-3 border-bottom border-2 border-white">
-          <img src="../assets/images/logo.png" alt="no image" class="w-25" />
-          <h1 class="text-light mb-0">
-            piza <span class="text-warning"> Khmer</span>
-          </h1>
-          <p class="text-light">Yummy with me</p>
-        </div>
-        <ul class="list-unstyled text-light mt-3 ps-5">
-          <a href="" class="text-decoration-none text-light">
-            <li class="py-2">
-              <i class="bi bi-house"></i>
-              Home
-            </li>
-          </a>
-          <a href="" class="text-decoration-none text-light">
-            <li class="py-2">
-              <i class="bi bi-house"></i>
-              Items
-            </li>
-          </a>
-          <a href="" class="text-decoration-none text-light">
-            <li class="py-2">
-              <i class="bi bi-house"></i>
-              category
-            </li>
-          </a>
-          <a href="" class="text-decoration-none text-light">
-            <li class="py-2">
-              <i class="bi bi-house"></i>
-              Orders
-            </li>
-          </a>
-        </ul>
-        <div
-          class="px-2 position-absolute bottom-0 w-100 text-center py-3 border-top border-2 border-white">
-          <button class="btn btn-danger w-100 rounded-lg">logout</button>
-        </div>
-      </aside>
-      <main>
-        <h1 class="text-center text-danger text-sm">welcome admin</h1>
-        <header></header>
-        <section></section>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- link bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <!-- link css -->
+  <link rel="stylesheet" href="app\assets\styles\style.css" />
+  <!-- link icons bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <!-- link jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="font-fira">
+  <div class="container-fluid p-0 d-none d-lg-flex">
+    <!-- side bar -->
+    <aside class="col-2 bg-success sticky-top" style="height: 100vh">
+      <div class="w-100 text-center py-0 border-bottom border-2 border-white">
+        <img src="app\assets\images\logo.png" alt="no image" class="w-25" />
+        <h4 class="text-light mb-0">
+          pizza. <span class="text-warning"> Khmer</span>
+        </h4>
+        <h5 class="text-light fs-6 py-3">Yummy with me</h5>
+      </div>
+      <ul class="list-unstyled text-light mt-3 ps-5 fs-5 py-1">
+        <a href="./index.php" class="text-decoration-none text-light mt-3 hover_bg">
+          <li class="py-2 hover_bg mt-3">
+            <i class="bi bi-house me-3"></i>
+            Home
+          </li>
+        </a>
+        <a href="./index.php?page=itemsPage" class="text-decoration-none text-light py-2 hover_bg">
+          <li class="py-2 hover_bg mt-3">
+            <i class="bi bi-fork-knife me-3"></i>
+            Items
+          </li>
+        </a>
+        <a href="./index.php?page=sizePage" class="text-decoration-none text-light hover_bg">
+          <li class="py-2 hover_bg mt-3">
+            <i class="bi bi-bookmark-plus me-3"></i>
+            size
+          </li>
+        </a>
+        <a href="" class="text-decoration-none text-light hover_bg">
+          <li class="py-2 hover_bg mt-3">
+            <i class="bi bi-info-circle order-2 order-md-1 me-3"></i>
+            Orders
+          </li>
+        </a>
+      </ul>
+      <div class="px-2 position-absolute bottom-0 w-100 text-center py-3 border-top border-2 border-white">
+        <button class="btn btn-danger w-100 rounded-lg">
+          <i class="bi bi-box-arrow-right me-3"></i>
+          <span class="position-relative">logout</span>
+        </button>
+      </div>
+    </aside>
+    <!-- main content -->
+    <div class="col-10 bg-light p-2">
+      <!-- header  -->
+      <header class="d-flex justify-content-between text-secondary fs-5">
+        <p class="m-0 mb-1">Welcome to pizza store</p>
+        <p class="m-0 mb-1">Mr Tola</p>
+      </header>
+      <?php include $views ?>
       </main>
     </div>
-  </body>
+    <!-- no responsive on phone screen -->
+    <div class="container-fluid d-flex justify-content-center align-items-center d-lg-none" style="height: 100vh">
+      <img class="object-fit-cover" src="../assets/images/page_not_found.png" alt="only use for laptop"
+        style="width: 400px" />
+    </div>
+</body>
+<script src="app/assets//js/preview.js"></script>
+
 </html>

@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+/* universal customer global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
 /* font family */
 .font-fira {
   font-family: "Fira Sans", sans-serif;
 }
 .hover_bg:hover {
-  background-color: #f0f0f0;
+  background-color: #83bfcb;
   transition: 0.2s ease-in-out;
+  border-radius: 5px;
+}
+::-webkit-scrollbar {
+  width: 0;
 }

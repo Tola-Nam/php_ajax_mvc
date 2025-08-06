@@ -1,1 +1,72 @@
-<?php 
+<?php
+session_start();
+$page = $_GET['page'] ?? 'home';
+
+if (!isset($_SESSION['user']) && $page !== 'auth') {
+    header('Location: index.php?page=auth');
+    exit();
+}
+
+require_once 'app/controllers/HomeController.php';
+require_once 'app/controllers/itemsController.php';
+require_once 'app/controllers/sizeController.php';
+require_once 'app/controllers/AuthController.php';
+
+$func = $_POST['func'] ?? 'index';
+
+switch ($page) {
+    //~ for login and register
+    case 'auth':
+        $auth = new AuthController();
+        switch ($func) {
+            //^ for signUp account 
+            case 'signUp':
+                break;
+            //* for singIn account
+            case 'signIn':
+                break;
+            case 'logout':
+                break;
+            case 'signUpForm':
+                $auth->signUpFrom();
+                break;
+            default:
+                $auth->index();
+                break;
+        }
+        break;
+    case 'home':
+        $home = new HomeController();
+        switch ($func) {
+            case 'home':
+            // $home->index();
+            // break;
+            default:
+                $home->index();
+                break;
+        }
+        break;
+    case 'itemsPage':
+        $items = new ItemsController();
+        switch ($func) {
+            case 'home':
+            // $home->index();
+            // break;
+            default:
+                $items->index();
+                break;
+        }
+        // $controller->index();
+        break;
+    case 'sizePage':
+        $size = new SizeController();
+        switch ($func) {
+            case 'home':
+            // $home->index();
+            // break;
+            default:
+                $size->index();
+                break;
+        }
+        break;
+}
