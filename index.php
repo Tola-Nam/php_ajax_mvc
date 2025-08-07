@@ -13,11 +13,16 @@ require_once 'app/controllers/sizeController.php';
 require_once 'app/controllers/AuthController.php';
 
 $func = $_POST['func'] ?? 'index';
+$fn = $_GET['fn'] ?? null;
 
 switch ($page) {
     //~ for login and register
     case 'auth':
         $auth = new AuthController();
+        if ($fn) {
+            $auth->signUpForm();
+            exit(); // Exit after handling the signUpForm to prevent further processing
+        }
         switch ($func) {
             //^ for signUp account 
             case 'signUp':
