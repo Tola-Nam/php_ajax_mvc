@@ -1,5 +1,11 @@
 <?php
 session_start();
+// require_once './configs/config_database.php';
+// if (config_database::config_database()->connect_error) {
+//     die("Connection failed: " . config_database::config_database()->connect_error);
+// } else {
+//     echo 'Hello world';
+// }
 $page = $_GET['page'] ?? 'home';
 
 if (!isset($_SESSION['user']) && $page !== 'auth') {
@@ -11,6 +17,7 @@ require_once 'app/controllers/HomeController.php';
 require_once 'app/controllers/itemsController.php';
 require_once 'app/controllers/sizeController.php';
 require_once 'app/controllers/AuthController.php';
+
 
 $func = $_POST['func'] ?? 'index';
 $fn = $_GET['fn'] ?? null;
@@ -25,8 +32,8 @@ switch ($page) {
         }
         switch ($func) {
             //^ for signUp account 
-            case 'signUp':
-                break;
+            // case 'signUp':
+            //     break;
             //* for singIn account
             case 'signIn':
                 break;

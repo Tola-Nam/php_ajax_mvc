@@ -22,9 +22,8 @@
                 <input type="password" class="form-control my-3 shadow-none border" name="password" id="password"
                     required placeholder="Password">
                 <hr>
-                <button class="btn btn-primary w-100">Sign IN</button>
-                <p class="text-center mt-2">Don't have account <a href="index.php?page=auth&fn=signUpForm">Sign Up</a>
-                </p>
+                <button class="btn btn-primary w-100">Sign Up</button>
+                <p class="text-center mt-2">Don't have account <a href="index.php">SignIn</a> </p>
             </form>
         </div>
     </div>

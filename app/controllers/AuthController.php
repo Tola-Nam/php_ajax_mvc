@@ -3,10 +3,10 @@ class AuthController
 {
     public function index()
     {
-        include('app/views/register.php');
+        include('app/views/signIn.php');
     }
     public function signUpForm(){
-        include('app/views/signIn.php');
+        include('app/views/signUp.php');
     }
     public function signIn()
     {
